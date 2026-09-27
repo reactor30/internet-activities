@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виды деятельности в сети Интернет — 9 класс</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <header class="bg-indigo-600 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold tracking-tight">🌐 Виды деятельности в сети Интернет</h1>
+                <p class="text-indigo-200 mt-1 text-sm md:text-base">Интерактивный учебный тренажер для 9 класса</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex gap-2">
+                <button onclick="switchTab('theory')" id="btn-theory" class="px-4 py-2 rounded-lg font-medium text-sm transition bg-white text-indigo-600 shadow">Шпаргалка</button>
+                <button onclick="switchTab('quiz')" id="btn-quiz" class="px-4 py-2 rounded-lg font-medium text-sm transition bg-indigo-700 text-indigo-100 hover:bg-indigo-500">Тест</button>
+                <button onclick="switchTab('cases')" id="btn-cases" class="px-4 py-2 rounded-lg font-medium text-sm transition bg-indigo-700 text-indigo-100 hover:bg-indigo-500">Практикум</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
+
+        <!-- TAB 1: THEORY -->
+        <section id="tab-theory" class="space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+                <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    📖 Теоретическая шпаргалка
+                </h2>
+                <p class="text-slate-600 mb-6">Основные направления активности человека в глобальной сети Интернет:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">💬</div>
+                        <h3 class="font-semibold text-lg text-indigo-900 mb-2">Коммуникация и общение</h3>
+                        <p class="text-sm text-slate-600">Электронная почта, мессенджеры, соцсети, форумы. Обмен сообщениями, аудио- и видеосвязь на любых расстояниях.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-sky-50/50 border border-sky-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">🔍</div>
+                        <h3 class="font-semibold text-lg text-sky-900 mb-2">Поиск информации</h3>
+                        <p class="text-sm text-slate-600">Использование поисковых систем (Яндекс, Google), электронных библиотек, баз данных и новостных агрегаторов.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-emerald-50/50 border border-emerald-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">🎓</div>
+                        <h3 class="font-semibold text-lg text-emerald-900 mb-2">Образование и саморазвитие</h3>
+                        <p class="text-sm text-slate-600">Онлайн-курсы (Stepik, Coursera), вебинары, интерактивные тренажеры, изучение языков и школьных предметов.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-amber-50/50 border border-amber-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">🎨</div>
+                        <h3 class="font-semibold text-lg text-amber-900 mb-2">Создание контента</h3>
+                        <p class="text-sm text-slate-600">Ведение блогов, монтаж видео, дизайн, написание программного кода (программирование) и публикация в сети.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="bg-purple-50/50 border border-purple-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">💳</div>
+                        <h3 class="font-semibold text-lg text-purple-900 mb-2">Электронная коммерция</h3>
+                        <p class="text-sm text-slate-600">Покупка товаров в интернет-магазинах и маркетплейсах, онлайн-банкинг, государственные услуги.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-rose-50/50 border border-rose-100 rounded-xl p-5 hover:shadow-md transition">
+                        <div class="text-3xl mb-3">🎮</div>
+                        <h3 class="font-semibold text-lg text-rose-900 mb-2">Развлечения и досуг</h3>
+                        <p class="text-sm text-slate-600">Сетевые многопользовательские игры, стриминг фильмов и музыки, виртуальные туры по музеям.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button onclick="switchTab('quiz')" class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-xl shadow hover:bg-indigo-700 transition">Перейти к тесту ➔</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: QUIZ -->
+        <section id="tab-quiz" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6 border-b pb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900">📝 Проверочный тест</h2>
+                        <p class="text-sm text-slate-500">Ответьте на вопросы и проверьте свои знания</p>
+                    </div>
+                    <div id="quiz-score-badge" class="hidden bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-xl text-sm mt-3 md:mt-0">
+                        Результат: <span id="score-val">0</span> / 5
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="space-y-8">
+                    <!-- Question 1 -->
+                    <div class="question-card border border-slate-100 bg-slate-50/50 p-5 rounded-xl" data-correct="0">
+                        <p class="font-semibold text-slate-800 mb-3">1. Какой вид деятельности иллюстрирует покупка смартфона на маркетплейсе с оплатой банковской картой?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q1" value="0" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Электронная коммерция и финансовые услуги</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q1" value="1" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Создание и публикация контента</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q1" value="2" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Поиск и обработка информации</span>
+                            </label>
+                        </div>
+                        <p class="explanation text-xs text-slate-500 mt-3 hidden"></p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card border border-slate-100 bg-slate-50/50 p-5 rounded-xl" data-correct="1">
+                        <p class="font-semibold text-slate-800 mb-3">2. Школьник смотрит видеоурок по физике на образовательной платформе и решает интерактивный тест. К какому виду деятельности это относится?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q2" value="0" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Развлечения и досуг</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q2" value="1" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Образование и саморазвитие</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q2" value="2" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Коммуникация и общение</span>
+                            </label>
+                        </div>
+                        <p class="explanation text-xs text-slate-500 mt-3 hidden"></p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card border border-slate-100 bg-slate-50/50 p-5 rounded-xl" data-correct="2">
+                        <p class="font-semibold text-slate-800 mb-3">3. Что из перечисленного является ярким примером создания и публикации цифрового контента?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q3" value="0" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Переписка с другом в мессенджере</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q3" value="1" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Поиск расписания уроков в поисковой системе</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q3" value="2" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Монтаж видеоролика и выкладка на видеохостинг</span>
+                            </label>
+                        </div>
+                        <p class="explanation text-xs text-slate-500 mt-3 hidden"></p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question-card border border-slate-100 bg-slate-50/50 p-5 rounded-xl" data-correct="0">
+                        <p class="font-semibold text-slate-800 mb-3">4. Какое правило информационной безопасности нарушает пользователь, переходящий по сомнительной ссылке для ввода пароля?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q4" value="0" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Защита персональных данных и кибербезопасность</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q4" value="1" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Правила сетевого этикета при переписке</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q4" value="2" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Лимиты на скачивание файлов из интернета</span>
+                            </label>
+                        </div>
+                        <p class="explanation text-xs text-slate-500 mt-3 hidden"></p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card border border-slate-100 bg-slate-50/50 p-5 rounded-xl" data-correct="1">
+                        <p class="font-semibold text-slate-800 mb-3">5. Какую основную задачу выполняют поисковые системы (например, Яндекс или Google)?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q5" value="0" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Обеспечивают шифрование личной переписки</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q5" value="1" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Ищут нужную текстовую и медиаинформацию по запросу</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition">
+                                <input type="radio" name="q5" value="2" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-sm">Создают виртуальные копии музеев и выставок</span>
+                            </label>
+                        </div>
+                        <p class="explanation text-xs text-slate-500 mt-3 hidden"></p>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <button onclick="checkQuiz()" class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-xl shadow hover:bg-indigo-700 transition">Проверить ответы</button>
+                    <button onclick="resetQuiz()" class="bg-slate-200 text-slate-700 font-medium px-6 py-3 rounded-xl hover:bg-slate-300 transition">Сбросить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: CASES -->
+        <section id="tab-cases" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">💼 Практические кейс-задания</h2>
+                <p class="text-sm text-slate-500 mb-6">Проанализируйте жизненные ситуации и определите вид деятельности в интернете</p>
+
+                <div class="space-y-6">
+                    <!-- Case 1 -->
+                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-md mb-2">Ситуация №1</span>
+                        <p class="font-medium text-slate-800 mb-3">Мария решила подтянуть английский язык перед экзаменом. Она зарегистрировалась на интерактивном сервисе, выполняет грамматические упражнения и слушает подкасты с носителями языка.</p>
+                        <div class="flex flex-wrap gap-3 items-center">
+                            <button onclick="toggleCaseAnswer(1)" id="btn-case-1" class="text-sm bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Показать решение</button>
+                            <span id="answer-1" class="hidden text-sm font-medium text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg border border-emerald-200">
+                                💡 Ответ: Образование и саморазвитие
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Case 2 -->
+                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-md mb-2">Ситуация №2</span>
+                        <p class="font-medium text-slate-800 mb-3">Артем ведет собственный блог о программировании на Python, записывает обучающие ролики на YouTube и делится исходным кодом своих проектов на репозитории GitHub.</p>
+                        <div class="flex flex-wrap gap-3 items-center">
+                            <button onclick="toggleCaseAnswer(2)" id="btn-case-2" class="text-sm bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Показать решение</button>
+                            <span id="answer-2" class="hidden text-sm font-medium text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg border border-emerald-200">
+                                💡 Ответ: Создание и публикация контента
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Case 3 -->
+                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-md mb-2">Ситуация №3</span>
+                        <p class="font-medium text-slate-800 mb-3">Иван зашел на портал «Госуслуги», чтобы подать заявление на получение паспорта РФ, а затем через мобильное приложение банка оплатил коммунальные услуги.</p>
+                        <div class="flex flex-wrap gap-3 items-center">
+                            <button onclick="toggleCaseAnswer(3)" id="btn-case-3" class="text-sm bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Показать решение</button>
+                            <span id="answer-3" class="hidden text-sm font-medium text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg border border-emerald-200">
+                                💡 Ответ: Электронная коммерция и финансовые услуги
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-auto py-4 text-center text-xs text-slate-500">
+        <p>Учебный проект по информатике для 9 класса • Все виды деятельности в сети Интернет</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.getElementById('tab-theory').classList.add('hidden');
+            document.getElementById('tab-quiz').classList.add('hidden');
+            document.getElementById('tab-cases').classList.add('hidden');
+
+            // Reset buttons style
+            document.getElementById('btn-theory').className = "px-4 py-2 rounded-lg font-medium text-sm transition bg-indigo-700 text-indigo-100 hover:bg-indigo-500";
+            document.getElementById('btn-quiz').className = "px-4 py-2 rounded-lg font-medium text-sm transition bg-indigo-700 text-indigo-100 hover:bg-indigo-500";
+            document.getElementById('btn-cases').className = "px-4 py-2 rounded-lg font-medium text-sm transition bg-indigo-700 text-indigo-100 hover:bg-indigo-500";
+
+            // Show selected tab & highlight button
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).className = "px-4 py-2 rounded-lg font-medium text-sm transition bg-white text-indigo-600 shadow";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function checkQuiz() {
+            let score = 0;
+            const cards = document.querySelectorAll('.question-card');
+
+            cards.forEach((card, index) => {
+                const correctOption = card.getAttribute('data-correct');
+                const selected = card.querySelector('input[type="radio"]:checked');
+                const expEl = card.querySelector('.explanation');
+                
+                expEl.classList.remove('hidden');
+
+                if (selected) {
+                    const userVal = selected.value;
+                    if (userVal === correctOption) {
+                        score++;
+                        card.classList.remove('border-rose-300', 'bg-rose-50/50');
+                        card.classList.add('border-emerald-300', 'bg-emerald-50/50');
+                        expEl.textContent = "✅ Верно!";
+                        expEl.className = "explanation text-xs text-emerald-700 font-medium mt-3";
+                    } else {
+                        card.classList.remove('border-emerald-300', 'bg-emerald-50/50');
+                        card.classList.add('border-rose-300', 'bg-rose-50/50');
+                        expEl.textContent = "❌ Неверно. Правильный вариант отмечен в списке.";
+                        expEl.className = "explanation text-xs text-rose-700 font-medium mt-3";
+                    }
+                } else {
+                    card.classList.add('border-rose-300', 'bg-rose-50/50');
+                    expEl.textContent = "⚠️ Вы не выбрали вариант ответа.";
+                    expEl.className = "explanation text-xs text-amber-700 font-medium mt-3";
+                }
+            });
+
+            document.getElementById('score-val').textContent = score;
+            document.getElementById('quiz-score-badge').classList.remove('hidden');
+        }
+
+        function resetQuiz() {
+            const cards = document.querySelectorAll('.question-card');
+            cards.forEach(card => {
+                card.classList.remove('border-emerald-300', 'bg-emerald-50/50', 'border-rose-300', 'bg-rose-50/50');
+                const expEl = card.querySelector('.explanation');
+                expEl.classList.add('hidden');
+                const radios = card.querySelectorAll('input[type="radio"]');
+                radios.forEach(r => r.checked = false);
+            });
+            document.getElementById('quiz-score-badge').classList.add('hidden');
+        }
+
+        function toggleCaseAnswer(caseNum) {
+            const ansEl = document.getElementById('answer-' + caseNum);
+            const btnEl = document.getElementById('btn-case-' + caseNum);
+            if (ansEl.classList.contains('hidden')) {
+                ansEl.classList.remove('hidden');
+                btnEl.textContent = "Скрыть решение";
+                btnEl.className = "text-sm bg-slate-600 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition";
+            } else {
+                ansEl.classList.add('hidden');
+                btnEl.textContent = "Показать решение";
+                btnEl.className = "text-sm bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition";
+            }
+        }
+    </script>
+</body>
+</html>
